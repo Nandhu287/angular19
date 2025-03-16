@@ -1,0 +1,60 @@
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .welcome-container {
+    animation: fadeIn 2s ease-in-out;
+    padding: 20px;
+  }
+
+  .welcome-text {
+    animation: fadeIn 2s ease-in-out 1s;
+    font-size: 2rem;
+  }
+
+  .welcome-description {
+    animation: fadeIn 2s ease-in-out 2s;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .welcome-text {
+      font-size: 1.5rem;
+    }
+
+    .welcome-description {
+      font-size: 0.875rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .welcome-text {
+      font-size: 1.25rem;
+    }
+
+    .welcome-description {
+      font-size: 0.75rem;
+    }
+  }
+</style>
+<div class="container welcome-container">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center welcome-text">Welcome to PlayGround Application</h1>
+      <p class="text-center welcome-description">This is a place where you can play with Angular</p>
+    </div>
+  </div>
+</div>
+
+
+
+<router-outlet />
